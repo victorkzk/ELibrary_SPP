@@ -1,1 +1,1 @@
-Hello! Все пидарасы, я Д'артаньян.
+Hello! ELibrary app for documentooborot.
