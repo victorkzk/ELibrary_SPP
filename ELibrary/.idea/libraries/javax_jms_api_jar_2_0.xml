@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="javax.jms-api.jar-2.0" type="JMS">
+    <properties version="2.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/javax.jms-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
