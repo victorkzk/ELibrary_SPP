@@ -1,0 +1,29 @@
+
+<div ng-controller="LoginController as vm">
+    <div class="row">
+        <div class="middle-12 columns" ng-submit="vm.login()">
+            <form name="book">
+                <div class="row">
+                    <div class="small-12 large-4 small-centered columns">
+                        <label>Username
+                            <input ng-model="vm.credentials.username" placeholder="username">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 large-4 small-centered columns">
+                        <label>Password
+                            <input ng-model="vm.credentials.password" placeholder="password">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 large-4 small-centered columns">
+                        <button>Login!</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

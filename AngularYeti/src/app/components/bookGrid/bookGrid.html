@@ -1,0 +1,57 @@
+<div ng-controller="BookGridController as vm" ng-cloak>
+    <div class="callout column text-center" ng-click="vm.goToBooks()">
+        <img class="thumbnail" src="assets/images/yeti.jpg">
+        <div id="animated">
+            <h1>Hello! Welcome to book library!</h1>
+            <p class="lead malarkey"></p>
+        </div>
+    </div>
+
+    <hr id="books">
+    <div class="row">
+
+
+        <div  class="columns small-8 small-centered top-offset">
+            <div class="row">
+                <ul class="small-block-grid-2 medium-block-grid-4">
+
+                    <li class="min-size" ng-repeat="book in vm.books">
+
+                        <div class="th image-wrap">
+                            <a ng-click="vm.showBook(book.id)">
+                                <img aria-hidden=true
+                                     ng-src="{{book.imageSrc}}">
+                            </a>
+                            <a href ng-show="vm.data.roles[0].authority == 'ROLE_ADMIN'"
+                               data-reveal-id="delete-modal" ng-click="vm.setDeleteBook(book.id)"
+                               class="fa fa-times fa-2x delete-btn"></a>
+                        </div>
+
+                        <h5>{{book.title}}</h5>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-6 columns medium-centered">
+            <div class="page-button">
+                <label>Click</label>
+                <button class="inside" ng-disabled="!vm.isPrev" ng-click="vm.isPrev && vm.prevPage()">&#9664;</button>
+                <button class="inside" ng-disabled="!vm.isNext" ng-click="vm.isNext && vm.nextPage()">&#9654;</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="delete-modal" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true"
+         role="dialog">
+        <p id="modalTitle">Do you want to delete this book?</p>
+        <a id="close-modal-button" ng-click="vm.delete()" class="button alert ">Yes</a>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+</div>
+
+
+

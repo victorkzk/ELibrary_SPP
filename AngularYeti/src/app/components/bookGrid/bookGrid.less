@@ -1,0 +1,69 @@
+.image-wrap {
+  position: relative;
+}
+
+.delete-btn {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  color: #008CBA;
+}
+
+.th {
+  border-width: 4px;
+}
+
+.reveal-modal {
+  min-height: 0
+}
+
+.top-offset {
+  top: 20px;
+}
+
+
+.page-button {
+  height: 30px;
+  overflow: hidden;
+  display: inline-block;
+  border: 2px solid #008cba;
+  border-radius: 999px;
+  text-align: center;
+  width: 100%;
+  background: #fff;
+
+  &:hover {
+    border: none;
+    background-color: #008cba;
+    transition: background-color 0.3s ease;
+
+    .inside {
+      display: block;
+      font-size: 12px;
+      padding: 6px;
+      float: left;
+
+      &:hover {
+        transition: background-color 0.3s ease;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    label {
+      display: none;
+    }
+  }
+  .inside {
+    display: none;
+    color: #fff;
+    width: 50%;
+    z-index: 9999;
+  }
+
+  label {
+    padding: 2px;
+    color: #008cba;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

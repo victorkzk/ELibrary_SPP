@@ -1,0 +1,68 @@
+<div ng-controller="AddBookController as vm">
+  <div class="row">
+    <div class="medium-4 columns book-cover">
+      <form id="up-form" >
+        <button class="file-upload">
+          <input type="file" id="image-input" class="file-input"
+                 accept="image/*" >Upload Image</button>
+      </form>
+      <img ng-show="vm.isImageLoaded"  id="image" class="th" alt="book cover" />
+    </div>
+    <div class="medium-8 columns">
+      <form name="book">
+        <div class="row">
+          <div class="medium-6 columns">
+            <label>Title
+              <input type="text" placeholder="Enter title" ng-model="vm.book.title"/>
+            </label>
+          </div>
+          <div class="medium-6 columns">
+            <label>Authors
+              <input type="text" placeholder="Enter authors" ng-model="vm.book.author"/>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-12 columns">
+            <label>Description
+              <textarea placeholder="Enter description" ng-model="vm.book.description"></textarea>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-12 columns">
+            <label>Date
+              <input type="date"  ng-model="vm.book.date"/>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-6 columns">
+            <label>Rating
+              <input-stars ng-model="vm.book.rating" max="5"></input-stars>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-6 columns">
+            <label>Choose type</label>
+            <input type="radio" name="type" value="PDF" id="typePDF" ng-model="vm.book.type"><label
+            for="typePDF">PDF</label>
+            <input type="radio" name="type" value="EPUB" id="typeEPAB" ng-model="vm.book.type"><label
+            for="typeEPAB">EPUB</label>
+            <input type="radio" name="type" value="Paper" id="typePaper"
+                   ng-model="vm.book.type"><label
+            for="typePaper">Paper</label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+  <div class="row">
+    <div class="columns medium-2 medium-offset-10">
+      <a class="button radius" ng-click="vm.add()">Add</a>
+    </div>
+  </div>
+</div>

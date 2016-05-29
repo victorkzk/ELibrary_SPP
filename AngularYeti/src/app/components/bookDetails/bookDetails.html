@@ -1,0 +1,56 @@
+<div ng-controller="BookDetailsController as vm" ng-cloak>
+    <div class="row">
+        <div class="small-4 columns book-cover">
+            <a class="th" href="{{vm.book.imageSrc}}"><img ng-src="{{vm.book.imageSrc}}"></a>
+        </div>
+        <div class="medium-8 columns">
+            <form name="book">
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <p><strong>Title : </strong> {{vm.book.title}}
+                        </p>
+                    </div>
+                    <div class="medium-6 columns">
+                        <p><strong>Authors : </strong> {{vm.book.author}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-12 columns">
+                        <p><strong>Description : </strong> {{vm.book.description}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-12 columns">
+
+                        <p><strong>Date : </strong> {{vm.book.date}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-12 columns">
+                        <p><strong>Rating : </strong> {{vm.book.rating}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <p><strong>Available formats : </strong> {{vm.book.type}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <label>Rating :
+                            <input-stars readonly ng-model="vm.book.rating" max="5"></input-stars>
+                        </label>
+                    </div>
+                </div>
+
+
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
